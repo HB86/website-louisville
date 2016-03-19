@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>24/7 Fitness Louisville</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <style>
+      #map {
+        width: 500px;
+        height: 400px;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="header-link" href="index.html">Home</a>
+        <a class="header-link" href="location.html">Location</a>
+        <a class="header-link" href="contact.html">Contact Us</a>
+    </header>
+     <div id="map"></div>
+    <script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+          center: {lat: 38.240134, lng: -85.7234167},
+          zoom: 19
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
+</body>
+</html>
